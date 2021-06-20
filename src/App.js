@@ -54,7 +54,7 @@ function App() {
           />
         </div>
           <div>
-            {!weather.message ? (
+            {!weather.message || typeof weather.main != "undefined" ? (
               <div>
                 <div className="location-box">
                   <div className="location">{weather.name}, {weather.sys.country}</div>
